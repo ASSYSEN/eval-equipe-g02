@@ -3,7 +3,7 @@
  * puis ne modifiez plus rien : les autres valeurs sont calculées à partir de GROUPE.
  */
 public final class Parametres {
-    public static final int GROUPE = 02;                                   // numéro donné par l'enseignant
+    public static final int GROUPE = 2;                                   // numéro donné par l'enseignant
     public static final String[] MEMBRES = {
         "A : Aida 1015748 (1015748)",
         "B : Mairam Thierno Ndiath(8651143)",
