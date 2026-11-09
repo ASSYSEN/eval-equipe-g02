@@ -8,9 +8,9 @@ Numéro de groupe :
 
 | Rôle | Prénom et nom | Matricule | Compte GitHub | Nom Git |
 |------|---------------|-----------|---------------|---------|
-| A — Comptes |  |  |  |  |
-| B — Plateforme |  |  |  |  |
-| C — Chaînes et USSD |  |  |  |  |
+| A — Comptes | Aida Sylla | 1015748 | ASSYSEN | ASSYSEN |
+| B — Plateforme | Mairame Thierno Ndiath | 8651143 | mairamend | Mairame Thierno Ndiath |
+| C — Chaînes et USSD | Saoudatou Gano | 8771279 |  |  |
 
 ## Bilan (à remplir à la fin, chacun écrit sa partie)
 

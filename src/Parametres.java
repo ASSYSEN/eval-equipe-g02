@@ -3,11 +3,11 @@
  * puis ne modifiez plus rien : les autres valeurs sont calculées à partir de GROUPE.
  */
 public final class Parametres {
-    public static final int GROUPE = 0;                                   // numéro donné par l'enseignant
+    public static final int GROUPE = 02;                                   // numéro donné par l'enseignant
     public static final String[] MEMBRES = {
-        "A : Prénom Nom (matricule)",
-        "B : Prénom Nom (matricule)",
-        "C : Prénom Nom (matricule)"
+        "A : Aida 1015748 (1015748)",
+        "B : Mairam Thierno Ndiath(8651143)",
+        "C : Saoudatou Gano (8771213)"
     };
 
     public static final int TAUX_FRAIS = 10 + GROUPE % 6;                 // pour mille (10 = 1 %)
