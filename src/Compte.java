@@ -1,4 +1,7 @@
 public abstract class Compte {
+
+    private static int nombreCrees = 0;
+
     private String numero;
     private String titulaire;
     private long solde=0;
@@ -6,7 +9,7 @@ public abstract class Compte {
     public Compte (String numero, String titulaire){
         this.numero=numero;
         this.titulaire=titulaire;
-        
+        nombreCrees++;
     }
 
     public String getNumero () {
@@ -21,6 +24,10 @@ public abstract class Compte {
         return this.solde;
     }
 
+    public static int getNombreCrees() {
+        return nombreCrees;
+    }
+
     public abstract long frais(long montant);
     public abstract long plafond();
     public abstract String type();
@@ -32,13 +39,29 @@ public abstract class Compte {
         
     }
     public boolean retirer(long montant) {
-    if (montant <= 0 || montant > plafond() ) return false;
-    long total = montant + frais( montant) ;
-    if (total >  this.solde) return false;
-    this.solde -= total ;
-    return true;
-}
+        if (montant <= 0 || montant > plafond() ) return false;
+        long total = montant + frais( montant) ;
+        if (total >  this.solde) return false;
+        this.solde -= total ;
+        return true;
+    }
 
-    
+    @Override
+    public String toString() {
+        return "[" + type() + "] " + numero + " " + titulaire + " " + solde + " FCFA";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Compte)) return false;
+        Compte autre = (Compte) o;
+        return this.numero.equals(autre.numero);
+    }
+
+    @Override
+    public int hashCode() {
+        return numero.hashCode();
+    }
         
 }
