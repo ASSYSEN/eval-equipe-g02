@@ -44,10 +44,28 @@ public class Plateforme {
         if(montant <= 0){
             return false;
         }
-        if(de == vers){
+       
+        Compte source = this.rechercher(de);
+        Compte destinataire = this.rechercher(vers);
+        
+        if(source == null || destinataire == null){
             return false;
         }
-        if(de.retire)
+         if(de.equals(vers)){
+            return false;
+        }
+        
+        if(source.retirer(montant)){
+            destinataire.deposer(montant);
+            this.totalFrais += source.frais(montant);
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+    public long getTotalFrais(){
+        return totalFrais;
     }
 
 
