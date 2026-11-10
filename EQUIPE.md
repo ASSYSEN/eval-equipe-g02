@@ -10,7 +10,7 @@ Numéro de groupe :
 |------|---------------|-----------|---------------|---------|
 | A — Comptes | Aida Sylla | 1015748 | ASSYSEN | ASSYSEN |
 | B — Plateforme | Mairame Thierno Ndiath | 8651143 | mairamend | Mairame Thierno Ndiath |
-| C — Chaînes et USSD | Saoudatou Gano | 8771279 |  |  |
+| C — Chaînes et USSD | Saoudatou Gano | 8771279 | ganosaoudatou2006-source | saoudatou gano |
 
 ## Bilan (à remplir à la fin, chacun écrit sa partie)
 
