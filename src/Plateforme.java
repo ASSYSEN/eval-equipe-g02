@@ -24,6 +24,7 @@ public class Plateforme {
         }
         this.comptes[cptCompte] = c;
         cptCompte++;
+        
         return true;
         
         
@@ -57,12 +58,24 @@ public class Plateforme {
         
         if(source.retirer(montant)){
             destinataire.deposer(montant);
-            this.totalFrais += source.frais(montant);
+            long frais = source.frais(montant);
+            this.totalFrais += frais;
+            if(cptJournal < 100){
+                journal[cptJournal] = String.format("TX%04d %s -> %s %d FCFA (frais %d)",cptJournal+1,de,vers,montant,frais);
+                cptJournal += 1;
+            }
             return true;
         }else{
             return false;
         }
         
+    }
+    public String[] journal(){
+        String[] copieJournal = new String[cptJournal];
+        for(int i = 0; i < cptJournal; i++) {
+                copieJournal[i] = journal[i];
+        }
+        return copieJournal;
     }
     public long getTotalFrais(){
         return totalFrais;
