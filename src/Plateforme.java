@@ -80,6 +80,20 @@ public class Plateforme {
     public long getTotalFrais(){
         return totalFrais;
     }
+    public int[] compterParType(){
+        int[] nombreTypeCompte = new  int[3];
+        for(int i = 0 ; i < cptCompte ; i++){
+            if (comptes[i].type().equals("STD")) {
+                nombreTypeCompte[0] += 1;
+            }else if (comptes[i].type().equals("PRM")) {
+                nombreTypeCompte[1] += 1;
+                
+            }else if (comptes[i].type().equals("MAR")){
+                nombreTypeCompte[2] += 1;
+            }
+        }
+        return nombreTypeCompte;
+    }
 
 
 }
