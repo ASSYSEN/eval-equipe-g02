@@ -107,7 +107,33 @@ public class Plateforme {
                 }
             }
         }
-    }
+        public Compte[] comptes(){
+            Compte[] comptesExact = new Compte[cptCompte];
+            for(int i = 0; i < cptCompte; i++){
+                comptesExact[i] = comptes[i];
+            }
+            return  comptesExact;
+        }
+        public  Compte[] comptesAuDessus(long seuil){
+            int cpt = 0;
+            for(int i = 0; i < cptCompte ; i++){
+                if(comptes[i].getSolde() >= seuil){
+                    cpt++;
+                }
+            }
+            Compte[] comptesDessus = new  Compte[cpt];
+            int k = 0;
+            for(int i = 0; i < cptCompte ; i++){
+                if(comptes[i].getSolde() >= seuil){
+                    comptesDessus[k] = comptes[i];
+                    k++;
+                }
+            }
+            return  comptesDessus;
+        }
+}
+
+  
 
 
 
