@@ -94,6 +94,20 @@ public class Plateforme {
         }
         return nombreTypeCompte;
     }
+    public void trierParSolde(){
+        
+        for(int i = 1; i < this.cptCompte; i++){
+            Compte temp = comptes[i];
+            int j = i;
+            while(j > 0 && (comptes[j - 1].getSolde() < temp.getSolde() || (comptes[j - 1].getSolde() == temp.getSolde() && comptes[j-1].getNumero().compareTo(temp.getNumero()) > 0))){
+                
+                     comptes[j] = comptes[j-1];
+                     comptes[j-1] = temp;
+                     j--;
+                }
+            }
+        }
+    }
 
 
-}
+
